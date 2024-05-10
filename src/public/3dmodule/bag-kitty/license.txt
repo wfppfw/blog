@@ -1,0 +1,11 @@
+Model Information:
+* title:	Kitty in A Bag
+* source:	https://sketchfab.com/3d-models/kitty-in-a-bag-cb6d3ba101694580a72d73e3492fb279
+* author:	AwesomeAmbz (https://sketchfab.com/AwesomeAmbz)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Kitty in A Bag" (https://sketchfab.com/3d-models/kitty-in-a-bag-cb6d3ba101694580a72d73e3492fb279) by AwesomeAmbz (https://sketchfab.com/AwesomeAmbz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
