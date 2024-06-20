@@ -22,7 +22,7 @@ import Footer from './footer.vue';
 import Header from './header.vue';
 import { useSetDymHead } from '@/composables/Function/useDymHead';
 // useSetDymHead();
-definePageMeta({
-    middleware: 'title',
-});
+// definePageMeta({
+//     middleware: 'title',
+// });
 </script>

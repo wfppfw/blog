@@ -1,9 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import showMsg from '~~/src/components/UI/Message/msgshow';
 import Message from '~~/src/components/UI/Message/index.js';
 
 const viewport = useViewport();
+const { navigation } = useContent();
 
+console.log(useContent(), navigation);
 watch(viewport.breakpoint, (newBreakpoint, oldBreakpoint) => {
     console.log('Breakpoint updated:', oldBreakpoint, '->', newBreakpoint);
 });
@@ -32,6 +34,15 @@ onMounted(() => {
             <div class="rowNose"></div>
             <div class="colNose"></div>
         </div>
+        <NuxtLink
+            v-for="link of navigation"
+            :key="link._path"
+            :to="link._path"
+            active-class="font-bold"
+            class="mr-6"
+        >
+            {{ link.title }}
+        </NuxtLink>
     </div>
 </template>
 

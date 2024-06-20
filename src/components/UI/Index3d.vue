@@ -25,9 +25,10 @@ onMounted(() => {
     const scene = new THREE.Scene();
     // scene.background = new THREE.Color(0xbfe3dd);
     renderer.setClearAlpha(0);
-    const texture = new THREE.TextureLoader().load(
-        '/_nuxt/assets/images/hero-gradient.svg',
-    );
+
+    // const texture = new THREE.TextureLoader().load(
+    //     '/_nuxt/assets/images/hero-gradient.svg',
+    // );
     // scene.background = texture;
     scene.environment = pmremGenerator.fromScene(
         new RoomEnvironment(),
@@ -37,7 +38,7 @@ onMounted(() => {
     const camera = new THREE.PerspectiveCamera(40, 1, 1, 100);
     camera.position.set(-2, 2, 20);
 
-    // const controls = new OrbitControls( camera, renderer.domElement );
+    const controls = new OrbitControls(camera, renderer.domElement);
     // controls.target.set( 0, 0.5, 0 );
     // controls.update();
     // controls.enablePan = true;
@@ -50,7 +51,7 @@ onMounted(() => {
     const loader = new GLTFLoader();
     loader.setDRACOLoader(dracoLoader);
     loader.load(
-        '/3dmodule/bag-bag-kitty/scene.gltf',
+        '/3dmodule/cat/scene.gltf',
         function (gltf) {
             const model = gltf.scene;
             model.position.set(0, 0, 0);
@@ -84,7 +85,7 @@ onMounted(() => {
 
         mixer.update(delta);
 
-        // controls.update();
+        controls.update();
 
         // stats.update();
 

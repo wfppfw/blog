@@ -18,7 +18,20 @@ export default defineNuxtConfig({
         buildAssetsDir: '/static/',
     },
     css: ['@/public/css/base.css'],
-    modules: ['@pinia/nuxt', 'nuxt-viewport', 'nuxt-icon'],
+    extends: ['@nuxt/ui-pro'],
+
+    modules: [
+        '@pinia/nuxt',
+        'nuxt-viewport',
+        'nuxt-icon',
+        '@nuxt/content',
+        '@nuxt/ui',
+        '@nuxt/fonts',
+        '@nuxtjs/tailwindcss',
+    ],
+    content: {
+        documentDriven: true,
+    },
     viewport: {
         breakpoints: {
             desktop: 1024,
@@ -37,5 +50,13 @@ export default defineNuxtConfig({
         },
         fallbackBreakpoint: 'desktop',
     },
-    router: { base: './' },
+    router: {
+        // base: './',
+        // routes: [
+        //     {
+        //         path: '/:catchAll(.*)', // 使用:catchAll()来捕获任何路径
+        //         component: '~/pages/about.vue', // 将这些路径映射到404页面
+        //     },
+        // ],
+    },
 });
